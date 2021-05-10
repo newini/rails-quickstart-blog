@@ -29,3 +29,34 @@
 <br>
 
 <%= link_to 'New Article', new_article_path, class: 'btn btn-primary' %>
+
+<hr>
+
+<h2>Statistics</h2>
+<div id="statistics"></div>
+<script>
+  var articles = {
+    x: <%= @articles.map{ |article| article.id } %>,
+    y: <%= @articles.map{ |article| article.body.length } %>,
+    name: 'Articles',
+    type: 'bar'
+  };
+
+  var layout = {
+    title: 'A statistics on articles',
+    xaxis: {
+      title: 'Article#',
+      tickangle: -45
+    },
+    yaxis: {
+      title: 'body length'
+    }
+  };
+
+  var data = [articles];
+
+  statistics = document.getElementById('statistics');
+
+  Plotly.newPlot( statistics, data, layout );
+</script>
+

@@ -11,3 +11,12 @@ import "channels"
 Rails.start()
 Turbolinks.start()
 ActiveStorage.start()
+
+// Bootstrap
+// import { Tooltip, Toast, Popover } from 'bootstrap';
+
+// Plotly.js
+// https://classic.yarnpkg.com/en/package/plotly.js-basic-dist
+var Plotly = require('plotly.js-dist')
+global.Plotly = Plotly
+console.log('Plotly.js. version: ' + Plotly.version)
