@@ -13,7 +13,7 @@ Turbolinks.start()
 ActiveStorage.start()
 
 // Bootstrap
-// import { Tooltip, Toast, Popover } from 'bootstrap';
+import 'bootstrap'
 
 // Plotly.js
 // https://classic.yarnpkg.com/en/package/plotly.js-basic-dist
